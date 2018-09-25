@@ -1,2 +1,2 @@
-# PantryC-
+# PantryCPP
 Вспомогательный код c++
