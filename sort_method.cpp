@@ -30,7 +30,7 @@ int main()
 {
     setlocale(0,"");
 
-    cout << "Просто тренировка алгоритмы!" << endl << endl;
+    cout << "mb sort_method"<< endl << endl;
 
     mbSort3();
 
@@ -47,21 +47,19 @@ void mbSort()
 
     int n;
 
-    cout << "Введите количество элементов:"<< endl;
+    cout << "Enter number count elementa:"<< endl;
     cin >> n;
     std::vector<int> a(n);
-
-
-    // забить значениями вектор.
+    
     for(int i=0; i < n; i++){
-        cout << "Введите значения: ";
+        cout << "Enter value: ";
         cin >> a[i];
     }
 
-    // отсортировать сектор с данными.
+    // function sotr STL
     std::sort(a.begin(),a.end());
 
-    // вывести значения отсортированного вектора.
+    // Out to console vector values.
     for(auto now : a){
         cout << now << " ";
     }
@@ -79,7 +77,7 @@ void mbSort2()
     for (int i=0; i < n; i++){
         int temp;
         cin >> temp;
-        // передать пару и положить ввектор (значение и номер).
+        // 
         a[i] = {temp, i};
     }
 
@@ -100,13 +98,13 @@ void mbSort3()
 {
 
     int n;
-    cout << "Введите кол. человек."<< endl;
+    cout << "Enter count human: "<< endl;
     cin >> n;
     std::vector< Human > a(n);
 
     for (int i=0; i < n; i++){
 
-        cout << "Введите рост имя"<< endl;
+        cout << "Enter human (height name): "<< endl;
         Human temp;
         cin >> temp.height >> temp.name;
 
@@ -114,11 +112,12 @@ void mbSort3()
         a[i] = temp;
     }
 
-
+    // sort function + func cmp
     std::sort(a.begin(), a.end(),cmp);
-    // устойчевая сортировка.
+    // 
     //std::stable_sort(a.begin(), a.end(),cmp);
 
+    // out
     for(auto now : a){
         cout << now.name << " ";
     }
